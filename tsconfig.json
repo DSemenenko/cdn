@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                                // Компилируйте до последней версии ECMAScript.
+    "module": "ESNext",                                // Используйте систему модулей ECMAScript.
+    "lib": ["DOM", "ESNext"],                          // Включите типы для DOM и все возможности ESNext.
+    "strict": true,                                    // Включите строгие проверки типов.
+    "esModuleInterop": true,                           // Разрешите импорт модулей по умолчанию для всех источников.
+    "skipLibCheck": true,                              // Пропустите проверку типов файлов .d.ts.
+    "forceConsistentCasingInFileNames": true,          // Отключите возможность разного написания путей к файлам.
+    "noEmitOnError": true,                             // Не создавайте выходные файлы если есть ошибки.
+    "resolveJsonModule": true,                         // Разрешите загрузку и импорт .json модулей.
+    "outDir": "./dist",                                // Каталог для скомпилированных файлов.
+    "baseUrl": ".",                                    // Основной URL для разрешения неполных путей модулей.
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./src/*"]                               // Сокращенный путь для импорта из src.
+    }
+  },
+  "include": [
+    "src/**/*"                                         // Включите все файлы TypeScript из src.
+  ],
+  "exclude": [
+    "node_modules",                                    // Исключите каталог node_modules.
+    "**/*.test.ts"                                     // Исключите файлы тестов, если они есть.
+  ]
+}
